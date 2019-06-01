@@ -48,7 +48,7 @@ namespace Lab_Session_3
             {
                 productList = new List<Product>();
             }
-
+            
             if (p.CheckStock())
             {
                 productList.Add(p);
@@ -106,4 +106,5 @@ namespace Lab_Session_3
             c2.getTotal();
         }
     }
+    
 }

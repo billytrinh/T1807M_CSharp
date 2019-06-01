@@ -35,19 +35,79 @@ namespace Session1
             List<int> ints = new List<int>();
             ints.Add(21);
             ints[0]++;
+            
+            SessionDemo2 ss2 = new SessionDemo2();
+            SessionDemo2 ss3 = new SessionDemo2(1,"hello");
         }
     }
 
-    class SessionDemo2
+    public class SessionDemo2
     {
-        public int age;
-        public string name;
+        private int age;
+        private string name;
 
+        public SessionDemo2()
+        {
+            
+        }
+        
         public SessionDemo2(int age, string name)
         {
             this.age = age;
             this.name = name;
         }
+
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                age = value;
+            }
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        
+        public virtual void ShowInfo()
+        {
+            this.Name = "hahaha";
+            Console.WriteLine(this.Name);
+        }
+
+        public void setInfo()
+        {
+            
+        }
     }
-    
+
+    class SessionDemo3 : SessionDemo2,IDemoX,IDemoX2
+    {
+        public override void ShowInfo()
+        {
+            
+        }
+
+        public new void setInfo()
+        {
+            
+        }
+    }
+
+    interface IDemoX
+    {
+        
+    }
+
+    interface IDemoX2
+    {
+        
+    }
+
 }
