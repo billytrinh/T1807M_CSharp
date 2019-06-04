@@ -52,7 +52,6 @@ namespace Lab_Session_3
             get => name;
             set => name = value;
         }
-
         public decimal Price
         {
             get => price;
