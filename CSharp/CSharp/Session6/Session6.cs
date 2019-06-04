@@ -7,6 +7,11 @@ namespace Session1.Session6
     {
         public static void Main(string[] args)
         {
+            showAnything<string> am = delegate(string s) { 
+                Console.WriteLine("hello "+s);
+            };
+            am("trump");
+            
             //MyGeneric<string> m1 = new MyGeneric<string>();
             //MyGeneric<int> m2 = new MyGeneric<int>();
 
