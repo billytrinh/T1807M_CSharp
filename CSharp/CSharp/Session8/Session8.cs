@@ -26,6 +26,11 @@ namespace Session1.Session8
         public static Number number = new Number();
         public static void Main(string[] args)
         {
+            Student s = new Student();
+           // s.mark[0] = 4;
+           s[0] = 3;
+           Console.WriteLine(s[0]);
+           
             Thread t1 = new Thread(RunThread);
             Thread t2 = new Thread(RunThread);
             t1.Start();
