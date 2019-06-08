@@ -8,6 +8,27 @@ namespace Session1.Session7
     {
         public static void Main(string[] args)
         {
+            Thread t = new Thread(SayCongru);
+            t.Start("Chuc mung nam moi");
+        }
+
+        public static void SayCongru(Object msg)
+        {
+            string s = (string) msg;
+            while (true)
+            {
+                for (int i = 10; i >= 0; i--)
+                {
+                    Console.WriteLine(i);
+                    Thread.Sleep(1000);
+                }
+                Console.WriteLine(s);
+            }
+            
+        }
+
+        public static void Main2(string[] args)
+        {
             Thread t1 = new Thread(RunSubThread);
             t1.Start("hello");
             
